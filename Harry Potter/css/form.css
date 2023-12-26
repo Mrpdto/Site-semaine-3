@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial';
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #e4d4b6;
+}
+
+.container {
+    max-width: 750px;
+    width: 100%;
+    background-color: #f1f5f9;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #e4d4b6 ;
+}
+
+.container .close{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    background-color: #abafb6;
+    cursor: pointer;
+    transition: 0.3s transform linear;
+}
+
+.container .close:hover {
+    transform: rotate(10deg);
+}
+
+.container .close svg {
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    stroke: #111827;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .box input {
+    height: 40px;
+    width: 100%;
+}
+
+.user-details .box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .box input {
+    height: 45px ;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .box input:focus,
+.user-details .box input:valid {
+    border-color: #696451;
+}
+
+.sexe-details legend{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sexe-details .category {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0;
+}
+
+form .button {
+    height: 45px;
+    margin:  0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #e4d4b6;
+    transition: 0.3s; width: ease-in-out;
+}
+
+form .button input:hover {
+    font-size:20px ;
+}
+
+@media (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+
+    form .user-details .box {
+        margin: 20px 0 12px 0;
+        width: 100%;
+    }
+
+    .sexe-details .category {
+        width: 100%;
+    }
+
+    .container form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 0;
+    }
+}
